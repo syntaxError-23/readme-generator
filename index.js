@@ -2,7 +2,7 @@ const fs = require('fs');
 const inquirer = require('inquirer');
 
 const writeReadme = content => {
-    fs.writeFile('generated-readme.md', content, err => {
+    fs.writeFile('README.md', content, err => {
         err ? console.error(err) : console.log('Your readme is ready!');
     })
 }
@@ -66,7 +66,31 @@ inquirer
 .then((response) => {
     const readmeContent = 
 `
-hello
-`
-    writeReadme(readmeContent)
-})
+# ${response.title}
+
+## Description
+${response.description}
+
+## Installation
+${response.installation}
+
+## Usage
+${response.usage}
+
+## License
+[![License: ${response.license}](https://img.shields.io/badge/License-${response.license}-brightgreen)
+
+This application is covered under the ${response.license} license.
+
+## Contributing
+${response.contributing}
+
+## Tests
+${response.tests}
+
+## Questions
+If you have any questions, you can reach me at [${response.email}] or visit my GitHub profile at [https://github.com/${response.username}](https://github.com/${response.username}).
+`;
+    writeReadme(readmeContent);
+});
+ 
