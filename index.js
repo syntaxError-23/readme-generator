@@ -1,6 +1,12 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 
+const writeReadme = content => {
+    fs.writeFile('generated-readme.md', content, err => {
+        err ? console.error(err) : console.log('Your readme is ready!');
+    })
+}
+
 inquirer
 .prompt([
     {
@@ -57,3 +63,10 @@ inquirer
     name: 'email',
     },
 ])
+.then((response) => {
+    const readmeContent = 
+`
+hello
+`
+    writeReadme(readmeContent)
+})
