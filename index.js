@@ -66,7 +66,17 @@ inquirer
 .then((response) => {
     const readmeContent = 
 `
+
 # ${response.title}
+
+## Contents
+1. [Description](#description)
+2. [Installation](#installation)
+3. [Usage](#usage)
+4. [License](#license)
+5. [Contributing](#contributing)
+6. [Tests](#tests)
+7. [Questions](#questions)
 
 ## Description
 ${response.description}
@@ -78,7 +88,7 @@ ${response.installation}
 ${response.usage}
 
 ## License
-[![License: ${response.license}](https://img.shields.io/badge/License-${response.license}-blue.svg)](https://opensource.org/licenses/${response.license})
+[![License: ${response.license}](https://img.shields.io/badge/License-${response.license}-orange)](https://opensource.org/licenses/${response.license})
 
 This application uses the ${response.license} license.
 
