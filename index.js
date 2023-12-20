@@ -78,9 +78,9 @@ ${response.installation}
 ${response.usage}
 
 ## License
-[![License: ${response.license}](https://img.shields.io/badge/License-${response.license}-brightgreen)
+[![License: ${response.license}](https://img.shields.io/badge/License-${response.license}-blue.svg)](https://opensource.org/licenses/${response.license})
 
-This application is covered under the ${response.license} license.
+This application uses the ${response.license} license.
 
 ## Contributing
 ${response.contributing}
@@ -89,7 +89,7 @@ ${response.contributing}
 ${response.tests}
 
 ## Questions
-If you have any questions, you can reach me at [${response.email}] or visit my GitHub profile at [https://github.com/${response.username}](https://github.com/${response.username}).
+If you have any questions, you can send me an email at [${response.email}] or head over to my GitHub profile at [https://github.com/${response.username}](https://github.com/${response.username}).
 `;
     writeReadme(readmeContent);
 });
